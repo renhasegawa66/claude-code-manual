@@ -2,7 +2,7 @@
 
 薄井匠氏（道草株式会社）の Claude Code 講座 初級編・応用編（参加者 約 10,000人 / 計 6 時間）の内容を、検索しやすい体系的なマニュアルブックに再構成した非公式の学習用ドキュメントです。
 
-🔗 **公開サイト**: [https://claude-code-manual.netlify.app](https://claude-code-manual.netlify.app)
+🔗 **公開サイト**: [https://claude-code-manual-629.netlify.app](https://claude-code-manual-629.netlify.app)
 
 ## 何が読めるか
 
