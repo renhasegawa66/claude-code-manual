@@ -6,9 +6,20 @@
 
 ## ホスティングとは
 
-- **ホスティング** = 自分のアプリをインターネット上のサーバに置くこと
-- **GitHub と連携** することで、push するたびに **自動再ビルド・自動再デプロイ**
-- 無料枠で `*.vercel.app` / `*.netlify.app` などのドメインが付与される
+<figure class="slide-figure">
+  <img src="/slides/advanced/page-051.jpg" alt="GitHub + Vercel の自動デプロイ">
+  <figcaption>変更 → GitHub → Vercel の 3 段階自動デプロイ（p.51）</figcaption>
+</figure>
+
+スライド原文（p.43-44）：
+
+> **Vercel とは**
+> - 作った Web サイトを一瞬で世界に公開できるサービス
+> - 無料枠でも個人利用なら十分
+> - URL が自動で発行される（例：`my-app.vercel.app`）
+>
+> **GitHub + Vercel で自動デプロイ**
+> - `git push` するだけで全世界に公開される
 
 ```
 [ローカル編集]
@@ -21,6 +32,31 @@
 ```
 
 ## Vercel でデプロイ
+
+### 初回のセットアップ手順（p.45）
+
+<div class="step-flow">
+  <div class="step">
+    <span class="n">1</span>
+    <h5>GitHub アカウントで Vercel にサインアップ</h5>
+    <p>OAuth で連携</p>
+  </div>
+  <div class="step">
+    <span class="n">2</span>
+    <h5>リポジトリを選択</h5>
+    <p>先ほど作った GitHub リポジトリを指定</p>
+  </div>
+  <div class="step">
+    <span class="n">3</span>
+    <h5>フレームワーク自動検出</h5>
+    <p>Next.js / Vite / 静的サイト を自動判別</p>
+  </div>
+  <div class="step">
+    <span class="n">4</span>
+    <h5>Deploy ボタン</h5>
+    <p>1〜2 分で公開完了</p>
+  </div>
+</div>
 
 ### ハンズオン
 
@@ -38,6 +74,13 @@ Claude が以下を裏で実行：
 4. 公開 URL を返す
 
 ### 再デプロイの体験
+
+スライド原文（p.50）：
+
+> 2 回目以降は GitHub に push するだけ
+> - `git push` した瞬間に Vercel が変更を検知
+> - **自動で再ビルド & 再公開**
+> - Claude に「デプロイして」と頼むだけで全部完了
 
 ```text
 タイトルとフォントをもう少しリッチに変更してください。

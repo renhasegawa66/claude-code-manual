@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'ja-JP',
   title: 'Claude Code 完全マニュアル',
-  description: '薄井匠氏の3時間ライブ講座（初級編・応用編）を元に構築した、Claude Code の体系的マニュアル。',
+  description: '薄井匠氏の3時間ライブ講座（初級編・応用編）と公式投影資料を元に構築した、Claude Code の体系的マニュアル。',
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,
@@ -11,7 +11,7 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#cc785c' }],
     ['meta', { property: 'og:title', content: 'Claude Code 完全マニュアル' }],
-    ['meta', { property: 'og:description', content: 'Claude Code 初級〜応用までを体系的に学ぶための実践マニュアル' }],
+    ['meta', { property: 'og:description', content: 'Claude Code 初級〜応用までを体系的に学ぶ実践マニュアル。公式スライド 270 枚を収録。' }],
     ['meta', { property: 'og:type', content: 'website' }],
   ],
 
@@ -30,6 +30,13 @@ export default defineConfig({
         text: '応用編',
         link: '/advanced/',
         activeMatch: '/advanced/',
+      },
+      {
+        text: 'スライド',
+        items: [
+          { text: '初級編スライド全集（145p）', link: '/slides/beginner' },
+          { text: '応用編スライド全集（125p）', link: '/slides/advanced' },
+        ],
       },
       {
         text: '付録',
@@ -57,6 +64,13 @@ export default defineConfig({
             { text: '8. チームエージェント', link: '/beginner/08-team-agents' },
             { text: '9. プロンプトの作法', link: '/beginner/09-prompting' },
             { text: '10. 落とし穴と安全運用', link: '/beginner/10-pitfalls' },
+            { text: '11. 便利コマンド集', link: '/beginner/11-commands' },
+          ],
+        },
+        {
+          text: '関連',
+          items: [
+            { text: '初級編スライド全集', link: '/slides/beginner' },
           ],
         },
       ],
@@ -75,6 +89,21 @@ export default defineConfig({
             { text: '8. 応用 MCP（Playwright / Context7 / Dispatch / Routines）', link: '/advanced/08-mcp-advanced' },
             { text: '9. AI 動画編集ワークフロー', link: '/advanced/09-video' },
             { text: '10. 個人ワークフローと総まとめ', link: '/advanced/10-workflow' },
+          ],
+        },
+        {
+          text: '関連',
+          items: [
+            { text: '応用編スライド全集', link: '/slides/advanced' },
+          ],
+        },
+      ],
+      '/slides/': [
+        {
+          text: 'スライド全集',
+          items: [
+            { text: '初級編（145p）', link: '/slides/beginner' },
+            { text: '応用編（125p）', link: '/slides/advanced' },
           ],
         },
       ],

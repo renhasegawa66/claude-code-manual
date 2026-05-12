@@ -1,6 +1,6 @@
 # 5. 実演デモ集
 
-ライブ講座で実演された 11 個のデモを **そのままなぞれる形** で再構成しました。
+ライブ講座で実演された **11 個のデモ** を **そのままなぞれる形** で再構成しました。
 それぞれ "プロンプト → 何が起きる → 何を学ぶか" の 3 段で読めます。
 
 ::: tip 共通の前提
@@ -9,6 +9,11 @@
 :::
 
 ## デモ 1 — タイマーアプリ
+
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-037.jpg" alt="タイマーアプリ作成のデモ">
+  <figcaption>デスクトップ上に index.html が直接配置される（p.37）</figcaption>
+</figure>
 
 ::: code-group
 ```text [プロンプト]
@@ -21,6 +26,11 @@
 - 開いた URL は `file://` または `localhost` で **自分の PC 専用**。他人には共有できない（後述のデプロイ章で公開する）
 
 ## デモ 2 — デスクトップを散らかして整理させる
+
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-050.jpg" alt="Claude Code を使ってファイルを散らかす → それを整理整頓してみる">
+  <figcaption>操作に慣れるためのファイル整理デモ（p.50）</figcaption>
+</figure>
 
 ::: code-group
 ```text [① 散らかす]
@@ -52,6 +62,11 @@ Excel に整理してください。Excel ファイルをアウトプットし�
 
 ## デモ 4 — 領収書のリネーム + 一覧化
 
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-067.jpg" alt="領収書の自動分類">
+  <figcaption>48 件の領収書を月別フォルダに一括整理（p.67）</figcaption>
+</figure>
+
 ::: code-group
 ```text [プロンプト]
 Receipts フォルダの領収書を、先ほどの名刺と同じ形式で
@@ -67,18 +82,29 @@ Excel にまとめてください。
 
 ## デモ 5 — タスク管理アプリ（中規模開発）
 
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-077.jpg" alt="AskUserQuestion ツールの質問項目例">
+  <figcaption>AskUserQuestionsTool が要件を逆質問してくる（p.77）</figcaption>
+</figure>
+
 ::: code-group
 ```text [プロンプト]
 シンプルなタスク管理アプリを作ってください
 ```
 :::
 
-- Claude 側が **要件が曖昧だと判断** すると、ユーザに逆質問してくれる
-  - Web / ネイティブ？
-  - ログイン要否？
-  - リマインダー要否？
+- Claude 側が **要件が曖昧だと判断** すると、`AskUserQuestionsTool` でユーザに逆質問してくれる
+  - Web か、ネイティブか、アプリか？
+  - ログイン要否？ 単独使用？
+  - タスク管理はどこまで？
+  - その他の機能は？
+  - バックエンドの実装は？
 - 完成までおおむね 10〜15 分
 - **学ぶこと**: 最初の解像度が低くても、AskUserQuestion で詰めれば事故が減る
+
+<div class="section-quote">
+「タイトなリソースでクイックなローンチを目指すためにバイブコーディングする AI スタートアップでのベストプラクティスは、<strong>最初のプロンプトの時点でのスペックの解像度</strong>が重要」<br>— 講師の引用（p.76）
+</div>
 
 ## デモ 6 — 生成画像 → UI 模倣
 
@@ -103,6 +129,11 @@ UI は添付した画像のものを限りなく模倣してください。
 
 ## デモ 8 — Google Calendar MCP
 
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-091.jpg" alt="/mcp で MCP の接続状況確認">
+  <figcaption>/mcp コマンドで接続状況を確認（p.91）</figcaption>
+</figure>
+
 ::: code-group
 ```text [プロンプト]
 Google Calendar と連携して一週間分の予定を教えてください。
@@ -111,6 +142,7 @@ Google Calendar と連携して一週間分の予定を教えてください。
 :::
 
 - 事前準備: 設定 → コネクタ から **Google Calendar** を接続
+- 接続状況は **`/mcp`** で確認できる（緑のチェックが付いていれば OK）
 - 出力フォーマットも指定可（表ではなくプレーンテキスト、など）
 
 ## デモ 9 — Gmail MCP で 20 件の下書き一括生成
@@ -128,12 +160,16 @@ Gmail の "下書き" として作成してください。
 **メール MCP は "下書きまで"** が鉄則です。誤送信は取り返しがつきません。
 :::
 
-## デモ 10 — Skill による PPTX 一発生成
+## デモ 10 — Skill による日程調整 / PPTX 一発生成
 
-事前に「道草スタイル PPTX 生成スキル」を取り込んでおく。
+事前に「日程調整 Skill」「道草スタイル PPTX 生成 Skill」を取り込んでおく。
 
 ::: code-group
-```text [プロンプト]
+```text [日程調整]
+/日程調整
+来週、1時間の Zoom 会議ができる空き枠を教えてください。
+```
+```text [PPTX 生成]
 /pptx_michikusa
 このメモを元に 100 枚のスライドを生成してください。
 （メモを貼り付け）
@@ -145,21 +181,31 @@ Gmail の "下書き" として作成してください。
 
 ## デモ 11 — チームエージェント（並列リサーチ）
 
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-104.jpg" alt="チームエージェントの仕組み">
+  <figcaption>1 体の Claude が分裂して並列実行（p.104）</figcaption>
+</figure>
+
 ::: code-group
 ```text [プロンプト]
-"薄井匠" についてリサーチしてください。
-その際チームエージェントを組んで、以下 4 つの並列エージェントで
+"<対象>" についてリサーチしてください。
+チームエージェントを組んで、以下 4 つの並列エージェントで
 進めてください:
 - SNS からの調査
 - Web 記事からの調査
 - YouTube からの調査
 - Wikipedia からの調査
+最後に統合レポートを 1 つにまとめてください。
 ```
 :::
 
 - Claude が **4 つの専門エージェントを生成 → 並列実行 → 結果統合**
 - **学ぶこと**: 1 人の Claude が 1 タスクを抱える働き方から、**Claude が部下の Claude を編成する** 働き方へ
 - 詳細は [8 章 チームエージェント](/beginner/08-team-agents)
+
+## おまけ — 終了通知マスコット
+
+講師の小ネタ：Claude Code のタスク終了を **デスクトップ上のキャラ** が教えてくれるフリーソフトが配布されている（GitHub 配布）。長時間ジョブを走らせるときに便利。
 
 ---
 

@@ -1,7 +1,15 @@
 # 3. 5 つの権限モード
 
-Claude Code は **左下のモードセレクタ** から 5 種類の権限モードを切り替えられます。
-**最重要トピックなので、必ず体で覚えてください。**
+Claude Code は **左下のモードセレクタ**、または入力中の **<kbd>Shift</kbd> + <kbd>Tab</kbd>** で 5 種類の権限モードを切り替えられます。
+
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-041.jpg" alt="5 つの権限モード">
+  <figcaption>左下のセレクタまたは Shift+Tab で切替（p.41）</figcaption>
+</figure>
+
+::: tip ショートカット <kbd>Shift</kbd> + <kbd>Tab</kbd>
+最も使う操作です。入力欄にカーソルがある状態で <kbd>Shift</kbd> + <kbd>Tab</kbd> を押すと、モードが順番に切り替わります。マウスでメニューを開く必要はありません。
+:::
 
 ## 一覧
 
@@ -13,26 +21,42 @@ Claude Code は **左下のモードセレクタ** から 5 種類の権限モ�
 | 4 | **自動モード** | 限りなく自律で動く | 中盤・確認済の流れ。Max プラン以上で出現 |
 | 5 | **許可をバイパス**（Bypass） | 一切確認せず全自動 | **初心者厳禁** |
 
-::: tip Plan モードが効く理由
+## なぜプランモードが効くか
+
 「先に計画を見せてもらう」だけで、無駄な作業や見当違いをかなり減らせます。
 **理想と現実のギャップ**（＝そのままだとどう動こうとしているか）が言語化されるので、
 "思ってたのと違う" を最初の段階で止められます。
-:::
 
 ## 講師の使い分け
 
-```
-[新しい・難しい・規模が大きいタスク]
-       ↓
-  プランモードで計画を出してもらう
-       ↓
-  内容を読んで OK なら → 自動モード で実行
-       ↓
-  簡単な小修正のフェーズに入ったら → Bypass も検討
-```
+<div class="step-flow">
+  <div class="step">
+    <span class="n">1</span>
+    <h5>新しい・難しい・規模が大きいタスク</h5>
+    <p>まず <strong>プランモード</strong> で計画を出してもらう</p>
+  </div>
+  <div class="step">
+    <span class="n">2</span>
+    <h5>内容を確認</h5>
+    <p>計画 OK なら <strong>自動モード</strong> に切替</p>
+  </div>
+  <div class="step">
+    <span class="n">3</span>
+    <h5>小修正フェーズ</h5>
+    <p>取り返しのつく作業のみ <strong>Bypass</strong> も検討可</p>
+  </div>
+</div>
+
+## Bypass モードについて
+
+<figure class="slide-figure">
+  <img src="/slides/beginner/page-043.jpg" alt="Bypass モードを使う気分">
+  <figcaption>Bypass モードを使う気分（HUNTER×HUNTER 風／p.43）</figcaption>
+</figure>
 
 ::: warning Bypass は最後の手段
-講師曰く、Bypass モードを使う気分は **「ハンターハンターで主人公が自分の体を犠牲にして敵を倒すあのシーン」** くらいの覚悟が必要。
+講師曰く、Bypass モードを使う気分は
+**「ハンターハンターで主人公が自分の体を犠牲にして敵を倒すあのシーン」** くらいの覚悟が必要。
 何が起きても自己責任です。
 :::
 

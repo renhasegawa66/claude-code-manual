@@ -19,7 +19,7 @@
 
 ## 並列 Claude Code 運用
 
-- `Cmd + N`（macOS）で **複数 Claude Code** を立ち上げて並列処理
+- <kbd>Cmd</kbd> + <kbd>N</kbd>（macOS）で **複数 Claude Code** を立ち上げて並列処理
 - 例: レシート整理しながら、別ウィンドウで名刺整理
 - **モニターを複数買え**（講師は 4 枚体制）
 
@@ -53,7 +53,7 @@
 
 ### なぜスペックが要るか
 
-- MLX Whisper / Remotion は重い
+- mlx-whisper / Remotion は重い
 - 複数 Claude Code を並列で動かす
 - ブラウザ／Notion／Slack を同時に開く
 - Docker / Supabase ローカル開発
@@ -74,22 +74,35 @@
 
 ループを回せる人だけが、Claude Code を使い倒せる。
 
-## 2 日間で身についたこと
+## Day 2 で身についたこと（公式まとめ p.107-108）
 
-ここまでで、以下が全部 **自分の手で再現可能** になっているはずです：
+<figure class="slide-figure">
+  <img src="/slides/advanced/page-107.jpg" alt="Day 2 で学んだこと（前半）">
+  <figcaption>Day 2 まとめ前半（p.107）</figcaption>
+</figure>
 
-1. ✅ ローカルで Claude Code を使った開発
-2. ✅ **GitHub** でのバージョン管理
-3. ✅ **Vercel / Netlify** での自動デプロイ
-4. ✅ API キーの **`.env` / 環境変数** による安全な扱い
-5. ✅ **PokeAPI / 図書館 API** などを使った外部データ連携
-6. ✅ **Supabase** によるバックエンド（認証 / DB）
-7. ✅ **Playwright MCP** による動作テスト
-8. ✅ **チームエージェント** による並列タスク処理
-9. ✅ **`CLAUDE.md`** / 原始人プロンプト によるカスタマイズ
-10. ✅ **Dispatch / Routines** による常時稼働 & スマホ操作
-11. ✅ **Remotion + MLX Whisper** による AI 動画編集
-12. ✅ **Saxo Bank API** などによる自律エージェント取引（概念）
+<figure class="slide-figure">
+  <img src="/slides/advanced/page-108.jpg" alt="Day 2 で学んだこと（後半）">
+  <figcaption>Day 2 まとめ後半（p.108）</figcaption>
+</figure>
+
+応用編で扱った全項目：
+
+### 前半
+1. Claude Code のディレクトリ構造と `CLAUDE.md`
+2. GitHub の基本（`init` / `add` / `commit` / `push`）
+3. `gh` CLI の活用
+4. Vercel でのデプロイと push 連動の自動デプロイ
+5. API・MCP による外部連携と API キーの扱い方
+
+### 後半
+6. フロントとバックの違い、Supabase でバックエンド
+7. 個人情報・決済まわりのセキュリティ注意点
+8. 実践：Supabase でログイン付き SNS（インスタ風）
+9. 開発を加速する MCP（Playwright・Context7）
+10. Claude Code での動画編集（Remotion MCP）
+11. スマホ操作（Dispatch）と PC 常時オン（Amphetamine）
+12. Routines による定期実行
 
 ## "全体のストーリー" として
 
@@ -130,4 +143,6 @@
 - [付録 / ツール早見表](/appendix/tools) — 出てきたツールの一覧
 - [付録 / 名言集](/appendix/quotes) — 章扉に使った金言を全部まとめて
 - [付録 / クレジット](/appendix/credits) — このマニュアルの出典・謝辞
+- [初級編スライド全集](/slides/beginner) — 145 ページ
+- [応用編スライド全集](/slides/advanced) — 125 ページ
 :::

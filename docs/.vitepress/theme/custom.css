@@ -88,3 +88,167 @@
   font-family: var(--vp-font-family-mono);
   box-shadow: 0 1px 0 var(--vp-c-divider);
 }
+
+/* スライドサムネイル単体（章内に1枚埋め込み） */
+.vp-doc .slide-figure {
+  margin: 24px 0;
+  padding: 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.dark .vp-doc .slide-figure {
+  background: #1a1715;
+  border-color: var(--vp-c-divider);
+}
+.vp-doc .slide-figure:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  transform: translateY(-1px);
+}
+.vp-doc .slide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  margin: 0;
+}
+.vp-doc .slide-figure figcaption {
+  padding: 10px 14px;
+  font-size: 0.85em;
+  color: var(--vp-c-text-2);
+  border-top: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+}
+
+/* スライドギャラリー（全集ページ用グリッド） */
+.slide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 24px 0 48px;
+}
+.slide-card {
+  position: relative;
+  display: block;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  text-decoration: none !important;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.dark .slide-card { background: #1a1715; }
+.slide-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  border-color: var(--vp-c-brand-1);
+}
+.slide-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #fafafa;
+}
+.slide-card .slide-num {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.72em;
+  color: #fff;
+  background: rgba(0,0,0,.55);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--vp-font-family-mono);
+  letter-spacing: 0.02em;
+}
+
+/* 章扉のヒーローっぽいバナー */
+.chapter-hero {
+  margin: 8px 0 32px;
+  padding: 24px 28px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #cc785c 0%, #e89a7d 100%);
+  color: #fff;
+}
+.chapter-hero h1, .chapter-hero h2 {
+  color: #fff;
+  margin: 0 0 8px;
+  border: none;
+}
+.chapter-hero p {
+  color: rgba(255,255,255,.92);
+  margin: 0;
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+/* 並べて見せる 2 カラム比較 */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+@media (max-width: 720px) {
+  .compare-grid { grid-template-columns: 1fr; }
+}
+.compare-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 16px 20px;
+  background: var(--vp-c-bg-soft);
+}
+.compare-card h4 {
+  margin: 0 0 8px;
+  font-size: 1em;
+  color: var(--vp-c-brand-1);
+}
+.compare-card.muted {
+  background: transparent;
+  border-style: dashed;
+  color: var(--vp-c-text-2);
+}
+.compare-card.muted h4 {
+  color: var(--vp-c-text-2);
+}
+
+/* ステップフロー */
+.step-flow {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.step-flow .step {
+  position: relative;
+  padding: 16px 18px 14px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+.step-flow .step .n {
+  display: inline-block;
+  width: 26px; height: 26px; line-height: 26px;
+  text-align: center;
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.85em;
+  margin-bottom: 8px;
+}
+.step-flow .step h5 {
+  margin: 0 0 4px;
+  font-size: 0.95em;
+}
+.step-flow .step p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.88em;
+  line-height: 1.6;
+}

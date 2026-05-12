@@ -2,12 +2,27 @@
 
 ## "フロント" と "バック" を分けて考える
 
+<figure class="slide-figure">
+  <img src="/slides/advanced/page-074.jpg" alt="フロントとバックの違い">
+  <figcaption>フロント = 見える部分、バック = 見えない部分（p.74）</figcaption>
+</figure>
+
 | | 見える | 担うもの |
 | --- | --- | --- |
 | **フロントエンド** | ユーザに見える画面 | HTML / CSS / JS, ボタン、フォーム |
 | **バックエンド** | 裏側 | データベース、認証、ビジネスロジック |
 
-### Google フォームで例えると
+### Google フォームで例えると（p.75-77）
+
+<figure class="slide-figure">
+  <img src="/slides/advanced/page-076.jpg" alt="フロント = Google フォームの入力画面">
+  <figcaption>ユーザーが見る部分 = フロントエンド（p.76）</figcaption>
+</figure>
+
+<figure class="slide-figure">
+  <img src="/slides/advanced/page-077.jpg" alt="バック = フォームに紐づくスプレッドシート">
+  <figcaption>裏側のデータ部分 = バックエンド（p.77）</figcaption>
+</figure>
 
 - フォームに回答する画面 → **フロントエンド**
 - スプレッドシートに溜まっていく結果 → **バックエンド**
@@ -22,6 +37,11 @@ Claude Code は **外部の Supabase / Vercel / GitHub を組み合わせる** �
 
 ## Supabase とは
 
+<figure class="slide-figure">
+  <img src="/slides/advanced/page-080.jpg" alt="Supabase でバックエンドを一気に作れる">
+  <figcaption>Supabase は DB・認証・ストレージ一体型 BaaS（p.80）</figcaption>
+</figure>
+
 オープンソースで、無料枠が寛大な **BaaS（Backend as a Service）**。
 
 | 機能 | できること |
@@ -32,7 +52,19 @@ Claude Code は **外部の Supabase / Vercel / GitHub を組み合わせる** �
 | **Realtime** | 変更を WebSocket で配信 |
 | **Edge Functions** | サーバレス関数 |
 
+スライド原文（p.80）：
+
+> - 簡単にバックエンドを作れる例として Supabase
+> - Supabase CLI でログイン機能などを実装できる
+> - データベース・認証・ストレージが **全部入り**
+> - 無料枠でもある程度遊べる
+
 ## ハンズオン — X 風 SNS の作成
+
+スライド原文（p.85）：
+
+> 今回は X 風の投稿サイトを作る。
+> UI 等は適当でいいので、**ログイン機能・ユーザーごとに投稿** という機能。
 
 ::: code-group
 ```text [プロンプト]
@@ -102,6 +134,10 @@ Supabase の "posts" テーブルの RLS が
 - 認証済みでも他人の user_id では insert できない
 の 3 つを実際にテストしてください。
 ```
+
+::: tip スライド p.83 も再掲
+**「`Supabase セキュリティ対策` 等で検索！」** — 公開前にこのキーワードで一度は記事を読みましょう。
+:::
 
 ## バック構成の判断基準
 
