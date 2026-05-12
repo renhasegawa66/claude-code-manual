@@ -1,0 +1,90 @@
+/* Brand: Anthropic 系のオレンジ（#cc785c）をベースにしたカラーテーマ */
+
+:root {
+  --vp-c-brand-1: #cc785c;
+  --vp-c-brand-2: #b96a4f;
+  --vp-c-brand-3: #a55c43;
+  --vp-c-brand-soft: rgba(204, 120, 92, 0.14);
+
+  --vp-c-tip-1: #cc785c;
+  --vp-c-tip-2: #b96a4f;
+  --vp-c-tip-soft: rgba(204, 120, 92, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #cc785c 30%, #e89a7d 70%);
+
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #cc785c 30%, #f3c7b6 70%);
+  --vp-home-hero-image-filter: blur(48px);
+
+  --vp-c-bg-soft: #f8f5f2;
+}
+
+.dark {
+  --vp-c-bg-soft: #1f1c1a;
+}
+
+/* Hero 装飾 */
+.VPHome .VPHero .name {
+  letter-spacing: -0.02em;
+}
+
+.VPHome .VPHero .tagline {
+  font-weight: 500;
+}
+
+/* テーマ一貫性: ボタン */
+.VPButton.brand {
+  border-color: var(--vp-c-brand-1) !important;
+  background-color: var(--vp-c-brand-1) !important;
+}
+.VPButton.brand:hover {
+  border-color: var(--vp-c-brand-2) !important;
+  background-color: var(--vp-c-brand-2) !important;
+}
+
+/* 引用ブロックを上品に */
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  padding: 12px 20px;
+  border-radius: 0 8px 8px 0;
+  color: var(--vp-c-text-1);
+  font-style: normal;
+}
+
+/* カスタムカード — ホームの Feature の見栄え調整 */
+.VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+/* 章扉用 callout */
+.section-quote {
+  margin: 32px 0 24px;
+  padding: 20px 24px;
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 12px 12px 0;
+  font-size: 1.05em;
+  line-height: 1.8;
+}
+
+/* テーブルを少し詰める */
+.vp-doc table {
+  font-size: 0.95em;
+}
+
+/* キーボードショートカット表示 */
+.vp-doc kbd {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.85em;
+  font-family: var(--vp-font-family-mono);
+  box-shadow: 0 1px 0 var(--vp-c-divider);
+}
